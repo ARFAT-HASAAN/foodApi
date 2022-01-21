@@ -34,6 +34,7 @@ const ShowMeals = (data) => {
     });
   } else {
     document.getElementById("else").style.display = "block";
+    document.getElementById("spinner").style.display = "none";
   }
 };
 
