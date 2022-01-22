@@ -106,3 +106,52 @@ button {
   padding: 9px 7px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  #searchSection {
+    width: 50%;
+    margin: auto;
+    padding: 10px 0px;
+    text-align: center;
+  }
+  #searchSection input:nth-child(1) {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px 7px;
+    width: 95%;
+    font-size: bold;
+    margin: 5px 0px;
+  }
+
+  #searchSection input:nth-child(2) {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px 7px;
+    width: 40%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  #Contaienr {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px 15px;
+  }
+
+  button {
+    width: 25%;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px green;
+    padding: 9px 7px;
+    cursor: pointer;
+  }
+}
