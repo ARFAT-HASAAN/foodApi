@@ -39,10 +39,25 @@ const ShowMeals = (data) => {
 };
 
 const seeDetails = (details) => {
+  const container = document.getElementById("Contaienr");
+  container.textContent = "";
   const id = Number(details);
-  const url = `www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   console.log(url);
   fetch(url)
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => shoDetails(data.meals[0]));
+};
+
+const shoDetails = (meal) => {
+  const container = document.getElementById("Contaienr");
+  const div = document.createElement("div");
+  div.classList.add("col-4");
+  div.innerHTML = `
+   <img src="${meal.strMealThumb}" alt="food" />
+   <h1> ${meal.strMeal} </h1>
+   <p> ${meal.strInstructions} </p>
+  `;
+  container.appendChild(div);
+  console.log(meal);
 };
