@@ -104,4 +104,5 @@ button {
   border-radius: 5px;
   box-shadow: 1px 1px 1px green;
   padding: 9px 7px;
+  cursor: pointer;
 }
